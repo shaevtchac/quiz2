@@ -1,0 +1,34 @@
+@use 'reset' as *;
+@use 'config' as *;
+@use 'responsive' as *;
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+        'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.signs {
+    display: flex;
+    gap: 30px;
+    padding: 1rem;
+    &__image-container-1,
+    &__image-container-2,
+    &__image-container-3,
+    &__image-container-4 {
+        transition-property: transform;
+        transition-duration: 300ms;
+        transition-timing-function: linear;
+        transform: translateY(100vh);
+
+        flex: 1;
+    }
+    @for $i from 1 through 4 {
+        &__image-container-#{$i} {
+            transition-delay: ($i * 0.2s) + 0.15s;
+        }
+    }
+}
