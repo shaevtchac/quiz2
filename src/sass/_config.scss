@@ -1,5 +1,13 @@
 $primary-color: #272727;
 $secondary-color: #ff652f;
+$icon-color: rgba(
+    $color: #000000,
+    $alpha: 0.2,
+);
+$icon-hover-color: rgba(
+    $color: #000000,
+    $alpha: 0.5,
+);
 
 @function set-text-color($color) {
     @if (lightness($color) > 40%) {
@@ -7,6 +15,9 @@ $secondary-color: #ff652f;
     } @else {
         @return #fff;
     }
+}
+@mixin transition {
+    transition: all 300ms ease-in;
 }
 
 @mixin media-md {

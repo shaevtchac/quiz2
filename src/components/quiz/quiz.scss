@@ -1,0 +1,86 @@
+@import '../../sass/config';
+
+.question {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+.controls {
+    padding: 2rem;
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.signs {
+    height: 80vh;
+    display: flex;
+    gap: 30px;
+    padding: 5rem 1rem 1rem 1rem;
+    &__image-container-1,
+    &__image-container-2,
+    &__image-container-3,
+    &__image-container-4 {
+        transition-duration: 100ms;
+        transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        transform: translateY(90vh);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @for $i from 1 through 4 {
+        &__image-container-#{$i} {
+            transition-delay: ($i * 0.2s) + 0.15s;
+        }
+    }
+}
+progress {
+    position: absolute;
+    width: 70%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.score-sign {
+    opacity: 0.5;
+    position: relative;
+    width: calc(40px + 10vw);
+    p {
+        margin-block: auto;
+        font-size: calc(2rem + 6vw);
+        color: black;
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        text-align: center;
+        line-height: 1.35;
+    }
+    img {
+        position: absolute;
+        width: 100%;
+    }
+}
+@keyframes good-answer {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10vh);
+    }
+}
+@keyframes bad-answer {
+    0% {
+        transform: rotate(-10deg) rotateY(30deg);
+    }
+    50% {
+        transform: rotate(10deg) rotateY(30deg);
+    }
+    100% {
+        transform: rotate(0) rotateY(0);
+    }
+}

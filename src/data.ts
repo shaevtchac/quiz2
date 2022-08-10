@@ -1,4 +1,10 @@
-const signs = [
+export type Sign = {
+    id: number;
+    image: string;
+    name: string;
+    description: string;
+};
+export const signs: Sign[] = [
     {
         id: 1,
         image: 'Znak_A-1.svg',
@@ -865,5 +871,3 @@ const signs = [
         description: '',
     },
 ];
-
-export default signs;
