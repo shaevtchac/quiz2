@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import { signs, Sign } from '../../data';
 import { shuffle, getRandom, speech, later, playAudio } from '../../helpers';
+import { PlayIcon, CloseIcon } from '../icons';
 import './quiz.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark, faPlay } from '@fortawesome/free-solid-svg-icons';
-const IMAGES_LOCATION = 'assets/images/';
+
+export const IMAGES_LOCATION = 'assets/images/';
 const QUIZ_LENGTH = 40; //number of questions in quiz
 
 type Answer = {
@@ -116,9 +116,7 @@ const Quiz: React.FC<QuizProps> = ({ handleClose }) => {
             {currentQuestion && (
                 <div className="question">
                     <div className="controls">
-                        <FontAwesomeIcon
-                            icon={faPlay}
-                            className="icon"
+                        <PlayIcon
                             onClick={() => {
                                 speech(currentQuestion.text);
                             }}
@@ -130,11 +128,7 @@ const Quiz: React.FC<QuizProps> = ({ handleClose }) => {
                             />
                             <p>{score}</p>
                         </div>
-                        <FontAwesomeIcon
-                            icon={faXmark}
-                            className="icon"
-                            onClick={handleClose}
-                        />
+                        <CloseIcon onClick={handleClose} />
                     </div>
 
                     <div className="signs">

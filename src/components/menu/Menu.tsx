@@ -1,5 +1,6 @@
 import './menu.css';
 import { MenuOptions } from '../../App';
+import { IMAGES_LOCATION } from '../quiz/Quiz';
 
 interface MenuProps {
     handleMenuClick: (option: MenuOptions) => void;
@@ -13,7 +14,7 @@ const Menu: React.FC<MenuProps> = ({ handleMenuClick }) => {
                     handleMenuClick('quiz');
                 }}
             >
-                <img src="/assets/images/quiz.svg" alt="quiz" />
+                <img src={IMAGES_LOCATION + 'quiz.svg'} alt="quiz" />
                 Quiz
             </button>
             <button
@@ -21,7 +22,7 @@ const Menu: React.FC<MenuProps> = ({ handleMenuClick }) => {
                     handleMenuClick('learn');
                 }}
             >
-                <img src="/assets/images/nauka.svg" alt="nauka" />
+                <img src={IMAGES_LOCATION + 'nauka.svg'} alt="nauka" />
                 Nauka
             </button>
         </div>

@@ -1,0 +1,12 @@
+@import '../../sass/config';
+
+.icon {
+    color: $icon-color;
+    font-size: calc(1rem + 3vw);
+    cursor: pointer;
+    @include transition;
+}
+.icon:hover {
+    color: $icon-hover-color;
+    @include transition;
+}
