@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import {useState } from 'react';
 import AllSigns from './components/all-signs/AllSigns';
 import AnimatedBackground from './components/animated-background/AnimatedBackground';
 import Menu from './components/menu/Menu';
