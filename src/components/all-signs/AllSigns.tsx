@@ -83,6 +83,7 @@ const AllSigns: React.FC<AllSignsProps> = ({ handleClose }) => {
                             <div
                                 className="inner-sign"
                                 onClick={(e) => handleSignClick(e, sign)}
+                                onContextMenu={(e) => e.preventDefault()}
                             >
                                 <img
                                     src={IMAGES_LOCATION + sign.image}

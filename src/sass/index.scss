@@ -9,6 +9,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #dbf0ff;
+    overscroll-behavior: contain; //disable pull to refresh browser feture
     // background-blend-mode: screen, screen, lighten, overlay, lighten, difference,
     //     normal;
 }

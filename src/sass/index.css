@@ -81,4 +81,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #dbf0ff;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: contain;
 }/*# sourceMappingURL=index.css.map */
